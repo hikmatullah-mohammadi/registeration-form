@@ -12,64 +12,71 @@
   </header>
   <main>
     <hr />
-    <form action="#" class="reg-form">
-      <p>
-        <label>First name: </label>
-        <input type="text" placeholder="First name" required/>
-      </p>
-      <p>
-        <label>Middle name: </label> name: </label><br>
-        <input type="text" placeholder="Middle name" required/>
-      </p>
-      <p>
-        <label>Last name: </label><br>
-        <input type="text" placeholder="Last name" required/>
-      </p>
-      <p>
-        <label>Course: </label>
-        <select name="course" id="course" required>
-          <option selected disabled>Course</option>
-          <option value="Python">Python</option>
-          <option value="Java">Java</option>
-          <option value="C++">C++</option>
-          <option value="Nodejs">Node JS</option>
-          <option value="Web-front-end">Web front end</option>
-        </select>
-      </p>
-      <p id="gender">
-        <label>Gender: </label><br>
-        <input type="radio" name="gender" value="male" checked>
-        <label>Male</label>
-        <input type="radio" name="gender" value="female">
-        <label>Female</label>
-        <input type="radio" name="gender" value="other">
-        <label>Other</label>
-      </p>
-      <p>
-        <label>Phone: </label><br>
-        <input type="tel" required placeholder="Enter phone number"/>
-      </p>
-      <p>
-        <label>Current Address: </label><br>
-        <textarea 
+    <form action="/example.php" class="reg-form" method="POST">
+      <label>First name: </label>
+      <input type="text" placeholder="First name" required/>
+      
+      <label>Middle name: </label><br>
+      <input type="text" placeholder="Middle name" required/>
+      
+      <label>Last name: </label><br>
+      <input type="text" placeholder="Last name" required/>
+      
+      <label>Course: </label>
+      <select name="course" id="course" required>
+        <option selected disabled value="">Course</option>
+        <option value="Python">Python</option>
+        <option value="Java">Java</option>
+        <option value="C++">C++</option>
+        <option value="Nodejs">Node JS</option>
+        <option value="Web-front-end">Web front end</option>
+      </select>
+      
+      <label>Gender: </label><br>
+      <input type="radio" name="gender" value="male" checked>
+      <label>Male</label>
+      <input type="radio" name="gender" value="female">
+      <label>Female</label>
+      <input type="radio" name="gender" value="other">
+      <label>Other</label>
+      <br />
+      <label>Phone: </label><br>
+      <input 
+      type="tel" 
+      required
+      pattern="07[0-9]{8}"
+      placeholder="Enter phone number"
+      title="10 digits following this format: 07xxxxxxxx"
+      />
+      
+      <label>Current Address: </label><br>
+      <textarea 
         maxlength="150" 
         name="current-address" 
         placeholder="Current address" 
         required
-        ></textarea>
-      </p>
-      <p>
-        <label>Email: </label><br>
-        <input type="email" required placeholder="Email Address"/>
-      </p>
-      <p>
-        <label>Password: </label><br>
-        <input type="password" required placeholder="Enter password"/>
-      </p>
-      <p>
-        <label>Re-type Password: </label><br>
-        <input type="password" required placeholder="Retype password"/>
-      </p>
+      ></textarea>
+      
+      <label>Email: </label><br>
+      <input type="email" required placeholder="Email Address"/>
+      
+      <label>Password: </label><br>
+      <input 
+      type="password"
+      pattern="(?=(?:[^a-zA-Z]*[a-zA-Z]){5})(?=(?:\D*\d){2})(?=.*[@#$%&]).*"
+      required
+      placeholder="Enter password"
+      title="Must contain atleast 5 characters, one symbol '@#$%&' and two digits"
+      />
+      
+      <label>Re-type Password: </label><br>
+      <input 
+      type="password" 
+      pattern="(?=(?:[^a-zA-Z]*[a-zA-Z]){5})(?=(?:\D*\d){2})(?=.*[@#$%&]).*"
+      required
+      placeholder="Retype password"
+      />
+      
       <input type="submit" value="Register"/>
     </form>
   </main>

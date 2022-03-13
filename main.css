@@ -14,8 +14,7 @@ header h1 {
   text-shadow: 2px 2px red;
 }
 main {
-  width: 100%;
-  
+  width: 100%; 
 }
 .reg-form {
   width: 80%;
@@ -33,6 +32,9 @@ input[type='radio'] {
 input[type='submit'] {
   background-color: green;
   color: white;
+}
+input:invalid {
+  color: red;
 }
 textarea {
   width: 100%;
