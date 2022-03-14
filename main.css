@@ -27,7 +27,7 @@ input:not([type='radio']), select {
 }
 input[type='radio'] {
   margin-bottom: 10px;
-  margin-left: 10%;
+  margin-left: 5%;
 }
 input[type='submit'] {
   background-color: green;
